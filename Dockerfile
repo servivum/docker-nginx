@@ -1,6 +1,6 @@
-FROM debian:jessie
+# Nginx Docker Image + Pagespeed + H5BP Configs + Let's Encrypt!
 
-# Nginx with Google Pagespeed module
+FROM debian:jessie
 MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 
 # Versions
