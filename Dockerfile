@@ -6,16 +6,23 @@ MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 # Versions
 ENV NGINX_VERSION "1.9.9"
 ENV NGINX_PAGESPEED_VERSION "1.10.33.2"
-ENV BUILD_DEPS 'build-essential ca-certificates git libpcre3 libpcre3-dev unzip wget zlib1g-dev'
-
-# @TODO: Integrate key verification
 
 # Load build essentials
-RUN apt-get update && apt-get install -y $BUILD_DEPS && \
-	rm -rf /var/lib/apt/lists/* && \
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    ca-certificates \
+    git \
+    libpcre3 \
+    libpcre3-dev \
+    libreadline6 \
+    unzip \
+    wget \
+    zlib1g-dev \
+    && \
 	mkdir -p /usr/src/nginx
 
 # Load Pagespeed module, PSOL and nginx
+# @TODO: Integrate key verification
 RUN cd /usr/src/nginx && \
 	wget https://github.com/pagespeed/ngx_pagespeed/archive/release-${NGINX_PAGESPEED_VERSION}-beta.zip -O release-${NGINX_PAGESPEED_VERSION}-beta.zip && \
 	unzip release-${NGINX_PAGESPEED_VERSION}-beta.zip && \
@@ -34,24 +41,37 @@ RUN cd /usr/src/nginx && \
 	make && \
 	make install
 
-# @TODO: Use specific version of h5bp nginx confs
 # Copy h5bp nginx conf into nginx conf subfolder
+# @TODO: Use specific version of h5bp nginx confs
 RUN cd /usr/src/nginx && \
-	wget https://github.com/h5bp/server-configs-nginx/archive/master.zip && \
-	unzip master.zip && \
+	wget https://github.com/h5bp/server-configs-nginx/archive/master.zip -O server-configs-nginx.zip && \
+	unzip server-configs-nginx.zip && \
 	cp -r server-configs-nginx-master/h5bp/ /etc/nginx/h5bp
 
-# @TODO: Integrate Let's Encrypt!
+# Download Let's Encrypt!
+# @TODO: Use specific version of Let's Encrypt!
+RUN cd /usr/src/nginx && \
+    wget https://github.com/letsencrypt/letsencrypt/archive/master.zip -O letsencrypt.zip && \
+    unzip letsencrypt.zip && \
+    cp -r letsencrypt-master/ /etc/letsencrypt/ && \
+    ln -s /etc/letsencrypt/letsencrypt-auto /usr/local/bin/letsencrypt
 
+# Clean up
 # @TODO: Optimize image size
-# Clean
-RUN rm -rf /usr/src/nginx
-#	apt-get purge -y ca-certificates git libpcre3 libpcre3-dev zlib1g-dev
-#	apt-get clean autoclean && \
-#	apt-get autoremove -y
+RUN rm -rf /usr/src/nginx && \
+	apt-get purge -y -f \
+	build-essential \
+#	 libpcre3 \
+#    libpcre3-dev \
+#    libreadline6 \
+#    zlib1g-dev \
+	&& \
+	apt-get clean autoclean && \
+	apt-get autoremove -y && \
+	rm -rf /var/lib/apt/lists/*
 
-# @TODO: Add nginx logs to docker log collector
 # forward request and error logs to docker log collector
+# @TODO: Add nginx logs to docker log collector
 RUN mkdir -p /var/log/nginx && \
     ln -sf /dev/stdout /var/log/nginx/access.log && \
     ln -sf /dev/stderr /var/log/nginx/error.log
