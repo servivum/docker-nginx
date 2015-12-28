@@ -1,6 +1,6 @@
 # Nginx Docker Image + Pagespeed + H5BP Configs + Let's Encrypt!
 
-FROM debian:jessie
+FROM servivum/debian:jessie
 MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 
 # Versions
@@ -48,6 +48,9 @@ RUN cd /usr/src/nginx && \
 	unzip server-configs-nginx.zip && \
 	cp -r server-configs-nginx-master/h5bp/ /etc/nginx/h5bp
 
+# Add nginx to supervisor
+COPY etc/supervisor/conf.d/nginx.conf /etc/supervisor/conf.d/nginx.conf
+
 # Download Let's Encrypt!
 # @TODO: Use specific version of Let's Encrypt!
 RUN cd /usr/src/nginx && \
@@ -77,7 +80,6 @@ RUN mkdir -p /var/log/nginx && \
     ln -sf /dev/stderr /var/log/nginx/error.log
 
 VOLUME ["/var/cache/nginx"]
-
+WORKDIR /var/www
 EXPOSE 80 443
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["/usr/bin/supervisord"]
