@@ -10,13 +10,9 @@ ENV NGINX_PAGESPEED_VERSION "1.10.33.2"
 # Load build essentials
 RUN apt-get update && apt-get install -y \
     build-essential \
-    ca-certificates \
-    git \
     libpcre3 \
     libpcre3-dev \
     libreadline6 \
-    unzip \
-    wget \
     zlib1g-dev \
     && \
 	mkdir -p /usr/src/nginx
