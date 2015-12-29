@@ -35,7 +35,8 @@ RUN cd /usr/src/nginx && \
 		--sbin-path=/usr/sbin/nginx \
 		--conf-path=/etc/nginx/nginx.conf && \
 	make && \
-	make install
+	make install && \
+	rm -rf /usr/src/nginx
 
 # Copy h5bp nginx conf into nginx conf subfolder
 # @TODO: Use specific version of h5bp nginx confs
@@ -57,13 +58,8 @@ RUN cd /usr/src/nginx && \
 
 # Clean up
 # @TODO: Optimize image size
-RUN rm -rf /usr/src/nginx && \
-	apt-get purge -y -f \
+RUN apt-get purge -y -f \
 	build-essential \
-#	 libpcre3 \
-#    libpcre3-dev \
-#    libreadline6 \
-#    zlib1g-dev \
 	&& \
 	apt-get clean autoclean && \
 	apt-get autoremove -y && \
