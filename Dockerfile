@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
     libreadline6 \
     zlib1g-dev \
     && \
-	mkdir -p /usr/src/nginx
+    mkdir -p /usr/src/nginx
 
 # Load Pagespeed module, PSOL and nginx
 # @TODO: Integrate key verification
