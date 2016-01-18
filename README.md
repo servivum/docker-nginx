@@ -1,4 +1,4 @@
-![nginx 1.9.6](https://img.shields.io/badge/nginx-1.9.6-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+![nginx 1.9.6](https://img.shields.io/badge/nginx-1.9.6-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg) [![Travis](https://img.shields.io/travis/Servivum/docker-nginx.svg)](https://travis-ci.org/Servivum/docker-nginx)
 
 # Nginx Docker Image with Pagespeed + H5BP Configs + Let's Encrypt!
 
