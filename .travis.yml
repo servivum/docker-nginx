@@ -1,0 +1,9 @@
+services:
+  - docker
+
+install:
+  - docker build -t php .
+  - docker run -d --name nginx nginx
+
+script:
+  - docker ps | grep -q nginx
