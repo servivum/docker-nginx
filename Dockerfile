@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
     libpcre3-dev \
     libreadline6 \
     zlib1g-dev \
+    apache2-utils \
     && \
     mkdir -p /usr/src/nginx
 
