@@ -1,5 +1,5 @@
 ![nginx 1.9.10](https://img.shields.io/badge/nginx-1.9.10-brightgreen.svg?style=flat-square) 
-![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) 
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) 
 [![Travis](https://img.shields.io/travis/Servivum/docker-nginx.svg?style=flat-square)](https://travis-ci.org/Servivum/docker-nginx)
 [![ImageLayers Size](https://img.shields.io/imagelayers/image-size/servivum/nginx/latest.svg?style=flat-square)](https://imagelayers.io/?images=servivum/nginx:latest)
 
