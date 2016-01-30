@@ -2,7 +2,7 @@ services:
   - docker
 
 install:
-  - docker build -t php .
+  - docker build -t nginx .
   - docker run -d --name nginx nginx
 
 script:

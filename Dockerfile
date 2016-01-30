@@ -4,7 +4,7 @@ FROM servivum/debian:jessie
 MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 
 # Versions
-ENV NGINX_VERSION "1.9.9"
+ENV NGINX_VERSION "1.9.10"
 ENV NGINX_PAGESPEED_VERSION "1.10.33.2"
 
 # Load build essentials
@@ -14,7 +14,6 @@ RUN apt-get update && apt-get install -y \
     libpcre3-dev \
     libreadline6 \
     zlib1g-dev \
-    apache2-utils \
     && \
     mkdir -p /usr/src/nginx
 
@@ -55,6 +54,10 @@ RUN cd /usr/src/nginx && \
     unzip letsencrypt.zip && \
     cp -r letsencrypt-master/ /etc/letsencrypt/ && \
     ln -s /etc/letsencrypt/letsencrypt-auto /usr/local/bin/letsencrypt
+
+# Load apache2-utils because htpasswd is included.
+# @TODO: Is there a way to get only htpasswd without further apache stuff?
+RUN apt-get update && apt-get install -y apache2-utils
 
 # Clean up
 # @TODO: Optimize image size
