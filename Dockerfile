@@ -4,8 +4,8 @@ FROM servivum/debian:jessie
 MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 
 # Versions
-ENV NGINX_VERSION "1.9.10"
-ENV NGINX_PAGESPEED_VERSION "1.10.33.2"
+ENV NGINX_VERSION "1.9.12"
+ENV NGINX_PAGESPEED_VERSION "1.10.33.5"
 
 # Load build essentials
 RUN apt-get update && apt-get install -y \
