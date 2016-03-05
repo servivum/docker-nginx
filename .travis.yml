@@ -7,6 +7,7 @@ install:
   - sleep 10
 
 script:
+  - docker ps | grep nginx
   - docker exec nginx which nginx
   - docker exec nginx ps aux | grep nginx
   - docker exec nginx 2>&1 nginx -V | tr -- - '\n' | grep _pagespeed
