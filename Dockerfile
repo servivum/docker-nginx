@@ -5,7 +5,7 @@ MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 
 # Versions
 ENV NGINX_VERSION "1.9.12"
-ENV NGINX_PAGESPEED_VERSION "1.10.33.5"
+ENV NGINX_PAGESPEED_VERSION "1.10.33.6"
 
 # Load build essentials
 RUN apt-get update && apt-get install -y \
