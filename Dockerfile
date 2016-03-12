@@ -5,7 +5,7 @@ MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 
 # Versions
 ENV NGINX_VERSION "1.9.12"
-ENV NGINX_KEY_ID "A1C052F8"
+ENV NGINX_PGP_KEY_ID "A1C052F8"
 ENV NGINX_PAGESPEED_VERSION "1.10.33.6"
 
 # Load build essentials
@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     cd /usr/src/nginx && \
 	wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz && \
 	wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz.asc && \
-	gpg --keyserver x-hkp://pool.sks-keyservers.net --recv-keys ${NGINX_KEY_ID} && \
+	gpg --keyserver x-hkp://pool.sks-keyservers.net --recv-keys ${NGINX_PGP_KEY_ID} && \
 	gpg --verify nginx-${NGINX_VERSION}.tar.gz.asc nginx-${NGINX_VERSION}.tar.gz && \
 	tar -xvzf nginx-${NGINX_VERSION}.tar.gz && \
 	cd nginx-${NGINX_VERSION}/ && \
