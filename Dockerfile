@@ -4,8 +4,10 @@ FROM servivum/debian:jessie
 MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 
 # Versions
+# URL: http://nginx.org/en/download.html
 ENV NGINX_VERSION "1.9.12"
 ENV NGINX_PGP_KEY_ID "A1C052F8"
+# URL: https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source
 ENV NGINX_PAGESPEED_VERSION "1.10.33.6"
 
 # Load build essentials
