@@ -3,7 +3,7 @@
 # Nginx Docker Image with Useful Tools
 
 Dockerfile for creating Nginx image with useful tools, e.g. Google Pagespeed module, Nginx config templates, etc. See 
-[Docker Hub](https://github.com/docker-library/docs) for more details about the image.
+[Docker Hub](https://hub.docker.com/r/servivum/nginx) for more details about the image.
 
 ## What's inside?
 
@@ -16,4 +16,4 @@ Dockerfile for creating Nginx image with useful tools, e.g. Google Pagespeed mod
 
 ## Supported Tags
 
-- `fpm-7.0`, `fpm-7`, `fpm`, `latest` [(Dockerfile)](https://github.com/Servivum/docker-nginx)
+- `1.9`, `1`, `latest` [(Dockerfile)](https://github.com/Servivum/docker-nginx)
