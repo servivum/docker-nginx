@@ -1,16 +1,5 @@
 services:
   - docker
 
-install:
-  - docker build -t nginx .
-  - docker run -d --name nginx nginx
-  - sleep 10
-
 script:
-  - docker ps | grep nginx
-  - docker exec nginx which nginx
-  - docker exec nginx ps aux | grep nginx
-  - docker exec nginx 2>&1 nginx -V | tr -- - '\n' | grep _pagespeed
-  - docker exec nginx ls -al /etc/nginx/h5bp
-  - docker exec nginx which letsencrypt
-  - docker exec nginx which htpasswd
+  - ./test.sh
