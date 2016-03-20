@@ -41,6 +41,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		--conf-path=/etc/nginx/nginx.conf && \
 	make && \
 	make install && \
+	mkdir -p /var/log/nginx && \
 
 # Clean up
 	rm -rf /usr/src/nginx && \
