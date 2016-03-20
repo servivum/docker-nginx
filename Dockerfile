@@ -51,6 +51,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
 
+# Add nginx basic conf
+COPY etc/nginx/nginx.conf /etc/nginx/nginx.conf
+
 # Add nginx to supervisor
 COPY etc/supervisor/conf.d/nginx.conf /etc/supervisor/conf.d/nginx.conf
 

@@ -17,3 +17,9 @@ Dockerfile for creating Nginx image with useful tools, e.g. Google Pagespeed mod
 ## Supported Tags
 
 - `1.9`, `1`, `latest` [(Dockerfile)](https://github.com/Servivum/docker-nginx)
+
+## Usage
+
+To pass your own server block configuration, mount a file with conf 
+extension from your host system into `/etc/nginx/conf.d/`, e.g. 
+`docker run -P -v /host-folder/:/etc/nginx/conf.d`.

@@ -1,9 +1,21 @@
 #!/bin/bash
 set -ev
 
-echo "Building and running image ..."
+echo "Building image ..."
 docker build -t nginx .
-docker run -d -P --name nginx nginx
+
+echo "Creating nginx config for server block ..."
+cat > default.conf <<EOF
+server {
+    listen 80;
+    server_name _;
+    root /usr/local/nginx/html;
+    index index.html;
+}
+EOF
+
+echo "Running image ..."
+docker run -d -P -v $(pwd)/default.conf:/etc/nginx/conf.d/default.conf --name nginx nginx
 
 echo "Waiting some time, because the process manager inside the container runs async to the docker run command ..."
 sleep 10
@@ -33,3 +45,6 @@ docker ps
 
 echo "Connecting to nginx via port 80 ..."
 curl -f http://${IP}:${PORT}/
+
+echo "Removing nginx config for server block ..."
+rm default.conf
