@@ -18,3 +18,18 @@ docker exec nginx 2>&1 nginx -V | tr -- - '\n' | grep _pagespeed
 docker exec nginx ls -al /etc/nginx/h5bp
 docker exec nginx which letsencrypt
 docker exec nginx which htpasswd
+
+echo "Getting IP address of external docker-machine or using localhost instead ..."
+if ! docker-machine ip; then
+    export IP="127.0.0.1"
+else
+    export IP=$(docker-machine ip)
+fi
+echo "IP: $IP"
+
+export PORT=$(docker inspect --format='{{(index (index .NetworkSettings.Ports "80/tcp") 0).HostPort}}' nginx)
+echo "PORT: $PORT"
+docker ps
+
+echo "Connecting to nginx via port 80 ..."
+curl -f http://${IP}:${PORT}/
