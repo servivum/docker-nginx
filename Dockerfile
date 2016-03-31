@@ -5,10 +5,10 @@ MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 
 # Versions
 # URL: http://nginx.org/en/download.html
-ENV NGINX_VERSION "1.9.12"
+ENV NGINX_VERSION "1.9.13"
 ENV NGINX_PGP_KEY_ID "A1C052F8"
 # URL: https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source
-ENV NGINX_PAGESPEED_VERSION "1.10.33.6"
+ENV NGINX_PAGESPEED_VERSION "1.11.33.0"
 
 # Load build essentials
 RUN apt-get update && apt-get install -y --no-install-recommends \
