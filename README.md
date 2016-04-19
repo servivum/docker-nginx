@@ -1,4 +1,4 @@
-![nginx 1.9.12](https://img.shields.io/badge/nginx-1.9.12-brightgreen.svg?style=flat-square) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Travis](https://img.shields.io/travis/Servivum/docker-nginx.svg?style=flat-square)](https://travis-ci.org/Servivum/docker-nginx)
+![nginx 1.9.15](https://img.shields.io/badge/nginx-1.9.15-brightgreen.svg?style=flat-square) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Travis](https://img.shields.io/travis/Servivum/docker-nginx.svg?style=flat-square)](https://travis-ci.org/Servivum/docker-nginx)
 
 # Nginx Docker Image with Useful Tools
 
