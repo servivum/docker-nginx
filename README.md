@@ -7,7 +7,7 @@ Dockerfile for creating Nginx image with useful tools, e.g. Google Pagespeed mod
 
 ## What's inside?
 
-- Servivum Debian Base: [Read more](https://github.com/Servivum/docker-debian)
+- Servivum Debian Base: [Read more](https://github.com/servivum/docker-debian)
 - nginx: Modern webserver and reverse proxy
 - Google Pagespeed Module: nginx module for speeding up your website by using handy filters.
 - H5BP Nginx Server Configs: Collection of nginx configuration snippets.
@@ -16,7 +16,7 @@ Dockerfile for creating Nginx image with useful tools, e.g. Google Pagespeed mod
 
 ## Supported Tags
 
-- `1.9`, `1`, `latest` [(Dockerfile)](https://github.com/Servivum/docker-nginx)
+- `1.9`, `1`, `latest` [(Dockerfile)](https://github.com/servivum/docker-nginx)
 
 ## Usage
 
