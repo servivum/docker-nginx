@@ -16,7 +16,7 @@ Dockerfile for creating Nginx image with useful tools, e.g. Google Pagespeed mod
 
 ## Supported Tags
 
-- `1.9`, `1`, `latest` [(Dockerfile)](https://github.com/servivum/docker-nginx)
+- `1.10`, `1`, `latest` [(Dockerfile)](https://github.com/servivum/docker-nginx)
 
 ## Usage
 
