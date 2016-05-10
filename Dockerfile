@@ -9,6 +9,8 @@ ENV NGINX_VERSION "1.10.0"
 ENV NGINX_PGP_KEY_ID "A1C052F8"
 # URL: https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source
 ENV NGINX_PAGESPEED_VERSION "1.11.33.1"
+# URL: https://github.com/certbot/certbot/releases
+ENV LETS_ENCRYPT_VERSION "0.5.0"
 
 # Load build essentials
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -70,9 +72,9 @@ RUN mkdir -p /usr/src/nginx && \
 # Download Let's Encrypt!
 RUN mkdir -p /usr/src/nginx && \
     cd /usr/src/nginx && \
-    wget https://github.com/letsencrypt/letsencrypt/archive/master.zip -O letsencrypt.zip && \
-    unzip letsencrypt.zip && \
-    cp -r letsencrypt-master/ /etc/letsencrypt/ && \
+    wget https://github.com/certbot/certbot/archive/v${LETS_ENCRYPT_VERSION}.zip && \
+    unzip v${LETS_ENCRYPT_VERSION}.zip && \
+    cp -r certbot-${LETS_ENCRYPT_VERSION}/ /etc/letsencrypt/ && \
     ln -s /etc/letsencrypt/letsencrypt-auto /usr/local/bin/letsencrypt && \
     rm -rf /usr/src/nginx
 
