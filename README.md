@@ -1,4 +1,4 @@
-![nginx 1.11.0](https://img.shields.io/badge/nginx-1.11.0-brightgreen.svg?style=flat-square) ![PageSpeed 1.11.33.2](https://img.shields.io/badge/PageSpeed-1.11.33.2-brightgreen.svg?style=flat-square) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Travis](https://img.shields.io/travis/servivum/docker-nginx.svg?style=flat-square)](https://travis-ci.org/servivum/docker-nginx)
+![nginx 1.11.1](https://img.shields.io/badge/nginx-1.11.0-brightgreen.svg?style=flat-square) ![PageSpeed 1.11.33.2](https://img.shields.io/badge/PageSpeed-1.11.33.2-brightgreen.svg?style=flat-square) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Travis](https://img.shields.io/travis/servivum/docker-nginx.svg?style=flat-square)](https://travis-ci.org/servivum/docker-nginx)
 
 # Nginx Docker Image with Useful Tools
 
@@ -16,7 +16,7 @@ Dockerfile for creating Nginx image with useful tools, e.g. Google Pagespeed mod
 
 ## Supported Tags
 
-- `1.10`, `1`, `latest` [(Dockerfile)](https://github.com/servivum/docker-nginx)
+- `1.11`, `1`, `latest` [(Dockerfile)](https://github.com/servivum/docker-nginx)
 
 ## Usage
 
