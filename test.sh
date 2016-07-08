@@ -2,7 +2,7 @@
 set -ev
 
 echo "Building image ..."
-docker build -t nginx .
+docker build -t servivum/nginx .
 
 echo "Creating nginx config for server block ..."
 cat > default.conf <<EOF
@@ -15,7 +15,7 @@ server {
 EOF
 
 echo "Running image ..."
-docker run -d -P -v $(pwd)/default.conf:/etc/nginx/conf.d/default.conf --name nginx nginx
+docker run -d -P -v $(pwd)/default.conf:/etc/nginx/conf.d/default.conf --name nginx servivum/nginx
 
 echo "Waiting some time, because the process manager inside the container runs async to the docker run command ..."
 sleep 10
