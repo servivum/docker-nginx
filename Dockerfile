@@ -56,7 +56,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rm -rf /var/lib/apt/lists/*
 
 # Add nginx basic conf
-#COPY etc/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY etc/nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Add nginx to supervisor
 COPY etc/supervisor/conf.d/nginx.conf /etc/supervisor/conf.d/nginx.conf
