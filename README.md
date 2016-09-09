@@ -1,6 +1,6 @@
-![nginx 1.11.3](https://img.shields.io/badge/nginx-1.11.3-brightgreen.svg?style=flat-square) ![PageSpeed 1.11.33.2](https://img.shields.io/badge/PageSpeed-1.11.33.2-brightgreen.svg?style=flat-square) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Travis](https://img.shields.io/travis/servivum/docker-nginx.svg?style=flat-square)](https://travis-ci.org/servivum/docker-nginx)
+![nginx 1.11.3](https://img.shields.io/badge/nginx-1.11.3-brightgreen.svg?style=flat-square) ![PageSpeed 1.11.33.3](https://img.shields.io/badge/PageSpeed-1.11.33.3-brightgreen.svg?style=flat-square) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Travis](https://img.shields.io/travis/servivum/docker-nginx.svg?style=flat-square)](https://travis-ci.org/servivum/docker-nginx)
 
-# Nginx Docker Image with Useful Tools
+# Nginx Docker Image
 
 Dockerfile for creating Nginx image with useful tools, e.g. Google Pagespeed module, Nginx config templates, etc. See 
 [Docker Hub](https://hub.docker.com/r/servivum/nginx) for more details about the image.
