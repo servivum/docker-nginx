@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libpcre3 \
     libpcre3-dev \
     libreadline6 \
+    libssl-dev \
     zlib1g-dev \
     && \
     mkdir -p /usr/src/nginx && \
