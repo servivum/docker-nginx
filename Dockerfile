@@ -5,10 +5,10 @@ MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 
 # Versions
 # URL: http://nginx.org/en/download.html
-ENV NGINX_VERSION "1.11.4"
+ENV NGINX_VERSION "1.11.5"
 ENV NGINX_PGP_KEY_ID "A1C052F8"
 # URL: https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source
-ENV NGINX_PAGESPEED_VERSION "1.11.33.3"
+ENV NGINX_PAGESPEED_VERSION "1.11.33.4"
 # URL: https://github.com/certbot/certbot/releases
 ENV LETS_ENCRYPT_VERSION "0.8.1"
 
@@ -25,9 +25,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Load Pagespeed module, PSOL and nginx
     cd /usr/src/nginx && \
-	wget https://github.com/pagespeed/ngx_pagespeed/archive/release-${NGINX_PAGESPEED_VERSION}-beta.zip -O release-${NGINX_PAGESPEED_VERSION}-beta.zip && \
-	unzip release-${NGINX_PAGESPEED_VERSION}-beta.zip && \
-	cd ngx_pagespeed-release-${NGINX_PAGESPEED_VERSION}-beta/ && \
+	wget https://github.com/pagespeed/ngx_pagespeed/archive/release-${NGINX_PAGESPEED_VERSION}-stable.zip -O release-${NGINX_PAGESPEED_VERSION}-stable.zip && \
+	unzip release-${NGINX_PAGESPEED_VERSION}-stable.zip && \
+	cd ngx_pagespeed-release-${NGINX_PAGESPEED_VERSION}-stable/ && \
 	wget https://dl.google.com/dl/page-speed/psol/${NGINX_PAGESPEED_VERSION}.tar.gz && \
 	tar -xzvf ${NGINX_PAGESPEED_VERSION}.tar.gz && \
 
