@@ -25,9 +25,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Load Pagespeed module, PSOL and nginx
     cd /usr/src/nginx && \
-	wget https://github.com/pagespeed/ngx_pagespeed/archive/release-${NGINX_PAGESPEED_VERSION}-stable.zip -O release-${NGINX_PAGESPEED_VERSION}-stable.zip && \
-	unzip release-${NGINX_PAGESPEED_VERSION}-stable.zip && \
-	cd ngx_pagespeed-release-${NGINX_PAGESPEED_VERSION}-stable/ && \
+	wget https://github.com/pagespeed/ngx_pagespeed/archive/latest-stable.zip -O latest-stable.zip && \
+	unzip latest-stable.zip && \
+	cd ngx_pagespeed-latest-stable/ && \
 	wget https://dl.google.com/dl/page-speed/psol/${NGINX_PAGESPEED_VERSION}.tar.gz && \
 	tar -xzvf ${NGINX_PAGESPEED_VERSION}.tar.gz && \
 
@@ -39,7 +39,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	gpg --verify nginx-${NGINX_VERSION}.tar.gz.asc nginx-${NGINX_VERSION}.tar.gz && \
 	tar -xvzf nginx-${NGINX_VERSION}.tar.gz && \
 	cd nginx-${NGINX_VERSION}/ && \
-	./configure --add-module=/usr/src/nginx/ngx_pagespeed-release-${NGINX_PAGESPEED_VERSION}-beta \
+	./configure --add-module=/usr/src/nginx/ngx_pagespeed-latest-stable \
 		--sbin-path=/usr/sbin/nginx \
 		--conf-path=/etc/nginx/nginx.conf && \
 	make && \
