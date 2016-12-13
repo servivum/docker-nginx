@@ -8,7 +8,7 @@ MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 ENV NGINX_VERSION "1.11.7"
 ENV NGINX_PGP_KEY_ID "A1C052F8"
 # URL: https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source
-ENV NGINX_PAGESPEED_VERSION "1.11.33.5"
+ENV NGINX_PAGESPEED_VERSION "1.11.33.4"
 # URL: https://github.com/certbot/certbot/releases
 ENV LETS_ENCRYPT_VERSION "0.9.3"
 
