@@ -1,4 +1,4 @@
-![nginx 1.11.6](https://img.shields.io/badge/nginx-1.11.6-brightgreen.svg?style=flat-square) ![PageSpeed Latest](https://img.shields.io/badge/PageSpeed-Latest-brightgreen.svg?style=flat-square) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Travis](https://img.shields.io/travis/servivum/docker-nginx.svg?style=flat-square)](https://travis-ci.org/servivum/docker-nginx)
+![nginx 1.11.7](https://img.shields.io/badge/nginx-1.11.7-brightgreen.svg?style=flat-square) ![PageSpeed Latest](https://img.shields.io/badge/PageSpeed-Latest-brightgreen.svg?style=flat-square) [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Travis](https://img.shields.io/travis/servivum/docker-nginx.svg?style=flat-square)](https://travis-ci.org/servivum/docker-nginx)
 
 # Nginx Docker Image
 

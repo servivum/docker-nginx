@@ -5,10 +5,10 @@ MAINTAINER Patrick Baber <patrick.baber@servivum.com>
 
 # Versions
 # URL: http://nginx.org/en/download.html
-ENV NGINX_VERSION "1.11.6"
+ENV NGINX_VERSION "1.11.7"
 ENV NGINX_PGP_KEY_ID "A1C052F8"
 # URL: https://developers.google.com/speed/pagespeed/module/build_ngx_pagespeed_from_source
-ENV NGINX_PAGESPEED_VERSION "1.11.33.4"
+ENV NGINX_PAGESPEED_VERSION "1.11.33.5"
 # URL: https://github.com/certbot/certbot/releases
 ENV LETS_ENCRYPT_VERSION "0.9.3"
 
