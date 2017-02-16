@@ -41,7 +41,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	cd nginx-${NGINX_VERSION}/ && \
 	./configure --add-module=/usr/src/nginx/ngx_pagespeed-latest-stable \
 		--sbin-path=/usr/sbin/nginx \
-		--conf-path=/etc/nginx/nginx.conf && \
+		--conf-path=/etc/nginx/nginx.conf \
+		--with-http_ssl_module && \
 	make && \
 	make install && \
 	mkdir -p /var/log/nginx && \
