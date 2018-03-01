@@ -2,7 +2,7 @@
 
 # nginx Docker Image
 
-Dockerfile for creating Nginx image with useful tools, e.g. Google Pagespeed module, Nginx config templates, etc. See 
+Dockerfile for creating lightweight nginx image based on Alpine Linux. See 
 [Docker Hub](https://hub.docker.com/r/servivum/nginx) for more details about the image.
 
 ## Supported Tags
