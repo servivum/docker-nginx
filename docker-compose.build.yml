@@ -1,0 +1,9 @@
+version: "3.4"
+
+services:
+  nginx-1.12:
+    build:
+      context: 1.12/for-php-alpine/
+  nginx-1.13:
+    build:
+      context: 1.13/for-php-alpine/
