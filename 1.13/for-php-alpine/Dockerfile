@@ -5,4 +5,4 @@ LABEL maintainer "Patrick.Baber <patrick.baber@servivum.com>"
 COPY etc/default.conf /etc/nginx/conf.d/default.conf
 
 # Create project root
-RUN mkdir -p /var/www
+RUN mkdir -p /var/www/html
