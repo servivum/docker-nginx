@@ -2,12 +2,9 @@
 
 # nginx Docker Image
 
-Dockerfile for creating lightweight nginx image based on Alpine Linux. See 
-[Docker Hub](https://hub.docker.com/r/servivum/nginx) for more details about the image.
+Nginx Docker image with Brotli support based on tiny Alpine Linux. It's build like the official image from Docker Hub, but compiled with the Brotli nginx module.
 
 ## Supported Tags
 
-- `1.13-for-php-alpine` [(Dockerfile)](https://github.com/servivum/docker-nginx/blob/master/1.13/for-php-alpine/Dockerfile)
 - `1.13-brotli-alpine` [(Dockerfile)](https://github.com/servivum/docker-nginx/blob/master/1.13/brotli-alpine/Dockerfile)
-- `1.12-for-php-alpine` [(Dockerfile)](https://github.com/servivum/docker-nginx/blob/master/1.12/for-php-alpine/Dockerfile)
 - `1.12-brotli-alpine` [(Dockerfile)](https://github.com/servivum/docker-nginx/blob/master/1.12/brotli-alpine/Dockerfile)
