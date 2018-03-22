@@ -8,4 +8,6 @@ Dockerfile for creating lightweight nginx image based on Alpine Linux. See
 ## Supported Tags
 
 - `1.13-for-php-alpine` [(Dockerfile)](https://github.com/servivum/docker-nginx/blob/master/1.13/for-php-alpine/Dockerfile)
+- `1.13-brotli-alpine` [(Dockerfile)](https://github.com/servivum/docker-nginx/blob/master/1.13/brotli-alpine/Dockerfile)
 - `1.12-for-php-alpine` [(Dockerfile)](https://github.com/servivum/docker-nginx/blob/master/1.12/for-php-alpine/Dockerfile)
+- `1.12-brotli-alpine` [(Dockerfile)](https://github.com/servivum/docker-nginx/blob/master/1.12/brotli-alpine/Dockerfile)
