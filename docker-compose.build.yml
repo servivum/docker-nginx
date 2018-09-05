@@ -7,3 +7,6 @@ services:
   nginx-1.13-brotli:
     build:
       context: 1.13/brotli-alpine/
+  nginx-1.15-static-website:
+    build:
+      context: 1.15/static-website/
