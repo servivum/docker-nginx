@@ -1,12 +1,6 @@
 version: "3.4"
 
 services:
-  nginx-1.12-brotli:
-    build:
-      context: 1.12/brotli-alpine/
-  nginx-1.13-brotli:
-    build:
-      context: 1.13/brotli-alpine/
   nginx-1.15-static-website:
     build:
       context: 1.15/static-website/
