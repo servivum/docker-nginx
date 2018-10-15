@@ -9,7 +9,4 @@ The image is based on the official nginx image with a configuration for running 
 ## Supported Tags
 
 - `1.15-static-website` [(Dockerfile)](https://github.com/servivum/docker-nginx/blob/master/1.15/static-website/Dockerfile)
-<<<<<<< HEAD
 - `1.15-lemp-stack` [(Dockerfile)](https://github.com/servivum/docker-nginx/blob/master/1.15/lemp-stack/Dockerfile)
-=======
->>>>>>> b4b4d4a9a599b4d50aa9f38227f05c69321e96e4
