@@ -2,8 +2,10 @@ version: "3.7"
 
 services:
   nginx-1.15-static-website:
+    image: servivum/nginx:1.15-static-website
     build:
       context: 1.15/static-website/
   nginx-1.15-lemp-stack:
+    image: servivum/nginx:1.15-lemp-stack
     build:
       context: 1.15/lemp-stack/
